@@ -93,5 +93,19 @@
 	- tried some dummy queries address through GeoPy/ArcGIS API
 
 
-#### 19.02.2022:
-- try to make them work together (GeoPandas? Another "translator"?)
+#### 21.02.2022:
+- set up libraries:
+	- GDAL
+	- Pyproj
+- function to convert user input into coordinates
+- function to convert coordinates into CRS projections
+- TRYING to figure out a function that:
+	a) finds the good .tif file
+	b) "crops" it around the coordinates to have a smaller/visible 
+
+
+#### 22.02.2022:
+- solve problem with *find_geotiff* function:
+	**CPLE_OpenFailedError**
+- function to show a map from the *address_to_location* output (Folium?)
+- try 3D plotting (PyVista? Matplotlib?)
