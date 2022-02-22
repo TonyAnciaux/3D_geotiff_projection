@@ -27,7 +27,8 @@
 	- ArcGIS (API for coordinates)
 	- Folium (Addresses to MAP)
 	- Rasterio (GeoTIFF files)
-	- 
+	- PyProj (conversion?)
+	- plotly(3D plotting)	
 
 
 #### Data
@@ -42,7 +43,6 @@
 - Function that locates the coordinates on a map (Folium?)
 - Function that matches the coordinates with right Shapefiles from DSM/DTM and Cadastral (PyShp?)
 - Function that finds the matching TIFF file (Rasterio?)
-- Function that plots the 2D property on the map (Matplotlib? GeoPandas?)
 - Function that plots the 3D-Home model (VTK/PyVista?)
 
 
@@ -55,7 +55,7 @@
 - deduce features (area, square meters, pool, garden, floors, etc.):
 	- more research required 
 
-- find a way to optimize the speed and memory use
+- find a way to optimize the speed and memory use (cropping)
 - Develop a user-friendly GUI (TKinter?)
 
 
@@ -99,13 +99,35 @@
 	- Pyproj
 - function to convert user input into coordinates
 - function to convert coordinates into CRS projections
-- TRYING to figure out a function that:
-	a) finds the good .tif file
-	b) "crops" it around the coordinates to have a smaller/visible 
+- figured out a function that finds the good .tif file
 
 
 #### 22.02.2022:
-- solve problem with *find_geotiff* function:
-	**CPLE_OpenFailedError**
-- function to show a map from the *address_to_location* output (Folium?)
-- try 3D plotting (PyVista? Matplotlib?)
+
+- set up libraries:
+	- VTK (for nothing)
+	- PyVista (for nothing)
+	- + ipyvtklink (for nothing)
+	- plotly
+- started refarctoring the code in PyCharm:
+	- lost a lot of time setting *venv* for RasterIO issues - still doesn't work	
+- found a way to locate and crop the tif file in one function
+- plotted my first 3D buildings (two: one for each file)
+- merged the two matching .tif files and plotted in one 3D file
+
+
+#### 23.02.2022:
+
+- find solution for rasterIO issues in PyCharm (IF possible so I don't have to change library)
+- start TKinter GUI:
+	- find nice icons 
+	- color theme
+	- ...
+- find the matching property (dataset: cadastre): 
+	- can I extract more features?? (area, floors, swimming pools, etc?)
+- plot the address on a regular map (Folium?)
+
+
+#### 24.02.2022:
+
+- 
