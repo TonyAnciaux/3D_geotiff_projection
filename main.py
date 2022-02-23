@@ -4,7 +4,7 @@ from location import Location
 
 # Instantiating the window object of the application
 root = Tk()
-root.title("3D Houses - by FlatPlanet.com")
+root.title("3D Houses")
 
 
 # Defining input and label for users
@@ -13,10 +13,10 @@ entry = Entry(root, width=50)
 
 
 # Defining buttons and their functions
-button_3Dplot = Button(root, text="3D House", padx=60, anchor="center",
-                       command=lambda: Location.address_to_crs(entry.get))
-button_map = Button(root, text="Map", padx=70, anchor="center",
-                    command=lambda: Location.address_to_location(entry.get))
+button_3Dplot = Button(root, text="3D House", padx=60, anchor="center")
+                       # command=lambda: Location.address_to_crs(entry.get)
+button_map = Button(root, text="Map", padx=70, anchor="center")
+                    # command=lambda: Location.address_to_location(entry.get)
 button_exit = Button(root, text="X", command=root.destroy)
 
 
@@ -31,6 +31,6 @@ main_text.grid(row=0, column=0, columnspan=4, padx=25)
 entry.grid(row=1, column=0, columnspan=4, padx=25)
 
 
-# This allows the window object to remain on the screen and updates the interface.
 # This "event loop" will update the GUI according to program changes and user's inputs.
+# It *must* stay at the end of the code.
 root.mainloop()

@@ -3,14 +3,14 @@ from typing import Tuple, Any
 from geopy.geocoders import Nominatim
 from pathlib import Path
 from pyproj import Proj, transform
-#import rasterio
-#from rasterio.plot import show
-#from rasterio.windows import Window
+import rasterio
+from rasterio.plot import show
+from rasterio.windows import Window
 
 
 class Location:
     """
-    Something something something
+
     """
 
     def __init__(self):

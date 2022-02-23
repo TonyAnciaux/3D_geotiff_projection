@@ -118,16 +118,19 @@
 
 #### 23.02.2022:
 
+- started GUI with Tkinter
+- tried to solve PyCharm environment (should I switch library??!!)
+- tried to implement a shape_finder function to find the property *polygon*
+	might not be what I think it is and the function is not working
+
+
+
+#### TODO:
 - find solution for rasterIO issues in PyCharm (IF possible so I don't have to change library)
 - start TKinter GUI:
 	- find nice icons 
 	- color theme
-	- ...
+	- make methods work with entry.get()
 - find the matching property (dataset: cadastre): 
 	- can I extract more features?? (area, floors, swimming pools, etc?)
 - plot the address on a regular map (Folium?)
-
-
-#### 24.02.2022:
-
-- 
