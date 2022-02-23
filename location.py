@@ -3,12 +3,15 @@ from typing import Tuple, Any
 from geopy.geocoders import Nominatim
 from pathlib import Path
 from pyproj import Proj, transform
-import rasterio
-from rasterio.plot import show
-from rasterio.windows import Window
+#import rasterio
+#from rasterio.plot import show
+#from rasterio.windows import Window
 
 
 class Location:
+    """
+    Something something something
+    """
 
     def __init__(self):
         self.longitude = 0
@@ -17,20 +20,22 @@ class Location:
         self.y = 0
         self.address = input("What is your address?\n")
 
-    def address_to_location(self):
+    def address_to_location(self, address):
         geopy.geocoders.ArcGIS()
         geolocator = Nominatim(user_agent="ArcGIS")
-        location = geolocator.geocode(f"{self.address}")
+        location = geolocator.geocode(f"{address}")
         self.latitude = location.latitude
         self.longitude = location.longitude
-        self.location_to_crs(self.longitude, self.latitude)
+        main_text.config(text=location)
+        return location
+        # self.location_to_crs(self.longitude, self.latitude)
 
-    def location_to_crs(self, long: float, lat: float) -> Tuple[Any, Any]:
-        self.longitude = long
-        self.latitude = lat
+    def address_to_crs(self, address):
+        self.address_to_location(address)
         inproj = Proj('epsg:4326')
         outproj = Proj('epsg:31370')
         self.x, self.y = transform(inproj, outproj, self.longitude, self.latitude)
+        main_text.config(text=(self.x, self.y))
         return int(self.x), int(self.y)
 
     def tiff_finder(self):
