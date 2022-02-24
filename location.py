@@ -10,7 +10,7 @@ from rasterio.windows import Window
 
 class Location:
     """
-
+    this class does something
     """
 
     def __init__(self):
@@ -18,7 +18,6 @@ class Location:
         self.latitude = 0
         self.x = 0
         self.y = 0
-        self.address = input("What is your address?\n")
 
     def address_to_location(self, address):
         geopy.geocoders.ArcGIS()

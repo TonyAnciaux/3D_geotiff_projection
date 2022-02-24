@@ -121,13 +121,18 @@
 - started GUI with Tkinter
 - tried to solve PyCharm environment (should I switch library??!!)
 - tried to implement a shape_finder function to find the property *polygon*
-	might not be what I think it is and the function is not working
+
+
+#### 24.02.2022:
+
+- working with Geopandas and Shapely for the **shape_finder** function
+- 
 
 
 
 #### TODO:
 - find solution for rasterIO issues in PyCharm (IF possible so I don't have to change library)
-- start TKinter GUI:
+- TKinter GUI:
 	- find nice icons 
 	- color theme
 	- make methods work with entry.get()
