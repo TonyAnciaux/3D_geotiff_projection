@@ -126,16 +126,25 @@
 #### 24.02.2022:
 
 - working with Geopandas and Shapely for the **shape_finder** function
-- 
+- Turns out it's best directly with Fiona and Rasterio?! 
 
+
+#### 25.02.2022:
+
+- still trying to find a way to crop the tiff file with the shapefile 
+	while combining the 2 tiff files in one.
+	Have yet to find a solution for this or I'll just give up. 
+- solved the rasterio troubles in PyCharm
+- managed to make a function pass an entry.get() as argument 
+- discovered Plotly is not compatible with Tkinter... 
+	- embed Dash module? WTH?? 
+	- Matplotlib?
 
 
 #### TODO:
-- find solution for rasterIO issues in PyCharm (IF possible so I don't have to change library)
 - TKinter GUI:
 	- find nice icons 
 	- color theme
-	- make methods work with entry.get()
-- find the matching property (dataset: cadastre): 
+- find the matching property:
 	- can I extract more features?? (area, floors, swimming pools, etc?)
 - plot the address on a regular map (Folium?)

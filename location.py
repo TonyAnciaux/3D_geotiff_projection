@@ -1,4 +1,5 @@
 import geopy
+
 from typing import Tuple, Any
 from geopy.geocoders import Nominatim
 from pathlib import Path
@@ -9,9 +10,6 @@ from rasterio.windows import Window
 
 
 class Location:
-    """
-    this class does something
-    """
 
     def __init__(self):
         self.longitude = 0
@@ -25,8 +23,8 @@ class Location:
         location = geolocator.geocode(f"{address}")
         self.latitude = location.latitude
         self.longitude = location.longitude
-        main_text.config(text=location)
-        return location
+        main_text.config(text=address)
+        # return main_text.config(text=f"{self.longitude}, {self.latitude}")
         # self.location_to_crs(self.longitude, self.latitude)
 
     def address_to_crs(self, address):
