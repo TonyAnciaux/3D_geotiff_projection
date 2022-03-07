@@ -137,8 +137,14 @@
 - solved the rasterio troubles in PyCharm
 - managed to make a function pass an entry.get() as argument 
 - discovered Plotly is not compatible with Tkinter... 
-	- embed Dash module? WTH?? 
+	- embed Dash module? HOW?? 
 	- Matplotlib?
+
+
+#### 07.03.2022: 
+
+- 
+
 
 
 #### TODO:
