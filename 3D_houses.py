@@ -1,4 +1,4 @@
-#! ~/.conda/envs/3D_houses/bin/python
+#!~/.conda/envs/3D_houses/bin/python
 import numpy as np
 from pathlib import Path
 import geopy
@@ -42,7 +42,6 @@ def tiff_finder(x: float, y: float):
         with rasterio.open(path) as fd:
             if fd.bounds.left <= x <= fd.bounds.right:
                 if fd.bounds.bottom <= y <= fd.bounds.top:
-                    print(f"File source is {path}")
                     radius = 100
                     left, bottom, right, top = (
                         x - radius,
@@ -58,6 +57,7 @@ def tiff_finder(x: float, y: float):
                     )
                     loc += crop
     fig = go.Figure(data=[go.Surface(z=loc)])
+    fig.update_scenes(yaxis_autorange="reversed")
     fig.show()
 
 
