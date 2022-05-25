@@ -1,4 +1,4 @@
-# 3D House Project
+# 3D GeoTIFF Projection
 
 ## Description
 
